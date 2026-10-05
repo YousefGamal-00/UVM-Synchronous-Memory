@@ -1,0 +1,300 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /MEM_pkg
+=== Design Unit: work.MEM_pkg
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na   100.00%
+        Coverpoints/Crosses          6        na        na        na
+            Covergroup Bins         78        78         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /MEM_pkg/MEM_CVG/cg                             100.00%        100          -    Covered              
+    covered/total bins:                                    78         78          -                      
+    missing/total bins:                                     0         78          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint wr_rd_cp                               100.00%        100          -    Covered              
+        covered/total bins:                                 6          6          -                      
+        missing/total bins:                                 0          6          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint address_cp                             100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint data_cp                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint rst_cp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross cross_wr_rd_addr_cp                         100.00%        100          -    Covered              
+        covered/total bins:                                48         48          -                      
+        missing/total bins:                                 0         48          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross cross_wr_rd_rst_cp                          100.00%        100          -    Covered              
+        covered/total bins:                                12         12          -                      
+        missing/total bins:                                 0         12          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/MEM_pkg::MEM_CVG::cg           100.00%        100          -    Covered              
+    covered/total bins:                                    78         78          -                      
+    missing/total bins:                                     0         78          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint wr_rd_cp                               100.00%        100          -    Covered              
+        covered/total bins:                                 6          6          -                      
+        missing/total bins:                                 0          6          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin WR                                          59967          1          -    Covered              
+        bin RD                                          40033          1          -    Covered              
+        bin WR_to_RD                                    24048          1          -    Covered              
+        bin RD_to_WR                                    24048          1          -    Covered              
+        bin WR_to_WR                                    35919          1          -    Covered              
+        bin RD_to_RD                                    15984          1          -    Covered              
+    Coverpoint address_cp                             100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin ADDR_0                                      31116          1          -    Covered              
+        bin ADDR_MAX                                    31045          1          -    Covered              
+        bin ADDR_MID[1]                                  6174          1          -    Covered              
+        bin ADDR_MID[2]                                  6341          1          -    Covered              
+        bin ADDR_MID[3]                                  6247          1          -    Covered              
+        bin ADDR_MID[4]                                  6349          1          -    Covered              
+        bin ADDR_MID[5]                                  6352          1          -    Covered              
+        bin ADDR_MID[6]                                  6376          1          -    Covered              
+    Coverpoint data_cp                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin ALL_ZEROS                                       5          1          -    Covered              
+        bin ALL_ONES                                        3          1          -    Covered              
+        default bin OTHERS                              99992                     -    Occurred             
+    Coverpoint rst_cp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin ASSERTED                                     4822          1          -    Covered              
+        bin DEASSERTED                                  95178          1          -    Covered              
+    Cross cross_wr_rd_addr_cp                         100.00%        100          -    Covered              
+        covered/total bins:                                48         48          -                      
+        missing/total bins:                                 0         48          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <RD_to_RD,ADDR_MID[6]>                   1057          1          -    Covered              
+            bin <RD_to_RD,ADDR_MID[5]>                   1053          1          -    Covered              
+            bin <RD_to_RD,ADDR_MID[4]>                    988          1          -    Covered              
+            bin <RD_to_RD,ADDR_MID[3]>                    994          1          -    Covered              
+            bin <RD_to_RD,ADDR_MID[2]>                   1054          1          -    Covered              
+            bin <RD_to_RD,ADDR_MID[1]>                    924          1          -    Covered              
+            bin <WR_to_WR,ADDR_MID[6]>                   2224          1          -    Covered              
+            bin <WR_to_WR,ADDR_MID[5]>                   2291          1          -    Covered              
+            bin <WR_to_WR,ADDR_MID[4]>                   2306          1          -    Covered              
+            bin <WR_to_WR,ADDR_MID[3]>                   2226          1          -    Covered              
+            bin <WR_to_WR,ADDR_MID[2]>                   2275          1          -    Covered              
+            bin <WR_to_WR,ADDR_MID[1]>                   2266          1          -    Covered              
+            bin <RD_to_WR,ADDR_MID[6]>                   1581          1          -    Covered              
+            bin <RD_to_WR,ADDR_MID[5]>                   1509          1          -    Covered              
+            bin <RD_to_WR,ADDR_MID[4]>                   1554          1          -    Covered              
+            bin <RD_to_WR,ADDR_MID[3]>                   1573          1          -    Covered              
+            bin <RD_to_WR,ADDR_MID[2]>                   1510          1          -    Covered              
+            bin <RD_to_WR,ADDR_MID[1]>                   1522          1          -    Covered              
+            bin <WR_to_RD,ADDR_MID[6]>                   1514          1          -    Covered              
+            bin <WR_to_RD,ADDR_MID[5]>                   1499          1          -    Covered              
+            bin <WR_to_RD,ADDR_MID[4]>                   1501          1          -    Covered              
+            bin <WR_to_RD,ADDR_MID[3]>                   1454          1          -    Covered              
+            bin <WR_to_RD,ADDR_MID[2]>                   1502          1          -    Covered              
+            bin <WR_to_RD,ADDR_MID[1]>                   1462          1          -    Covered              
+            bin <RD,ADDR_MID[6]>                         2571          1          -    Covered              
+            bin <RD,ADDR_MID[5]>                         2552          1          -    Covered              
+            bin <RD,ADDR_MID[4]>                         2489          1          -    Covered              
+            bin <RD,ADDR_MID[3]>                         2448          1          -    Covered              
+            bin <RD,ADDR_MID[2]>                         2556          1          -    Covered              
+            bin <RD,ADDR_MID[1]>                         2386          1          -    Covered              
+            bin <WR,ADDR_MID[6]>                         3805          1          -    Covered              
+            bin <WR,ADDR_MID[5]>                         3800          1          -    Covered              
+            bin <WR,ADDR_MID[4]>                         3860          1          -    Covered              
+            bin <WR,ADDR_MID[3]>                         3799          1          -    Covered              
+            bin <WR,ADDR_MID[2]>                         3785          1          -    Covered              
+            bin <WR,ADDR_MID[1]>                         3788          1          -    Covered              
+            bin <RD_to_RD,ADDR_MAX>                      4960          1          -    Covered              
+            bin <WR_to_WR,ADDR_MAX>                     11138          1          -    Covered              
+            bin <RD_to_WR,ADDR_MAX>                      7370          1          -    Covered              
+            bin <WR_to_RD,ADDR_MAX>                      7577          1          -    Covered              
+            bin <RD,ADDR_MAX>                           12537          1          -    Covered              
+            bin <WR,ADDR_MAX>                           18508          1          -    Covered              
+            bin <RD_to_RD,ADDR_0>                        4954          1          -    Covered              
+            bin <WR_to_WR,ADDR_0>                       11193          1          -    Covered              
+            bin <RD_to_WR,ADDR_0>                        7429          1          -    Covered              
+            bin <WR_to_RD,ADDR_0>                        7539          1          -    Covered              
+            bin <RD,ADDR_0>                             12494          1          -    Covered              
+            bin <WR,ADDR_0>                             18622          1          -    Covered              
+    Cross cross_wr_rd_rst_cp                          100.00%        100          -    Covered              
+        covered/total bins:                                12         12          -                      
+        missing/total bins:                                 0         12          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <RD_to_RD,DEASSERTED>                   15212          1          -    Covered              
+            bin <WR_to_WR,DEASSERTED>                   34160          1          -    Covered              
+            bin <RD_to_WR,DEASSERTED>                   22885          1          -    Covered              
+            bin <WR_to_RD,DEASSERTED>                   22921          1          -    Covered              
+            bin <RD,DEASSERTED>                         38133          1          -    Covered              
+            bin <WR,DEASSERTED>                         57045          1          -    Covered              
+            bin <RD_to_RD,ASSERTED>                       772          1          -    Covered              
+            bin <WR_to_WR,ASSERTED>                      1759          1          -    Covered              
+            bin <RD_to_WR,ASSERTED>                      1163          1          -    Covered              
+            bin <WR_to_RD,ASSERTED>                      1127          1          -    Covered              
+            bin <RD,ASSERTED>                            1900          1          -    Covered              
+            bin <WR,ASSERTED>                            2922          1          -    Covered              
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /MEM_pkg/MEM_CVG/cg                             100.00%        100          -    Covered              
+    covered/total bins:                                    78         78          -                      
+    missing/total bins:                                     0         78          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint wr_rd_cp                               100.00%        100          -    Covered              
+        covered/total bins:                                 6          6          -                      
+        missing/total bins:                                 0          6          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint address_cp                             100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint data_cp                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint rst_cp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross cross_wr_rd_addr_cp                         100.00%        100          -    Covered              
+        covered/total bins:                                48         48          -                      
+        missing/total bins:                                 0         48          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross cross_wr_rd_rst_cp                          100.00%        100          -    Covered              
+        covered/total bins:                                12         12          -                      
+        missing/total bins:                                 0         12          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/MEM_pkg::MEM_CVG::cg           100.00%        100          -    Covered              
+    covered/total bins:                                    78         78          -                      
+    missing/total bins:                                     0         78          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint wr_rd_cp                               100.00%        100          -    Covered              
+        covered/total bins:                                 6          6          -                      
+        missing/total bins:                                 0          6          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin WR                                          59967          1          -    Covered              
+        bin RD                                          40033          1          -    Covered              
+        bin WR_to_RD                                    24048          1          -    Covered              
+        bin RD_to_WR                                    24048          1          -    Covered              
+        bin WR_to_WR                                    35919          1          -    Covered              
+        bin RD_to_RD                                    15984          1          -    Covered              
+    Coverpoint address_cp                             100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin ADDR_0                                      31116          1          -    Covered              
+        bin ADDR_MAX                                    31045          1          -    Covered              
+        bin ADDR_MID[1]                                  6174          1          -    Covered              
+        bin ADDR_MID[2]                                  6341          1          -    Covered              
+        bin ADDR_MID[3]                                  6247          1          -    Covered              
+        bin ADDR_MID[4]                                  6349          1          -    Covered              
+        bin ADDR_MID[5]                                  6352          1          -    Covered              
+        bin ADDR_MID[6]                                  6376          1          -    Covered              
+    Coverpoint data_cp                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin ALL_ZEROS                                       5          1          -    Covered              
+        bin ALL_ONES                                        3          1          -    Covered              
+        default bin OTHERS                              99992                     -    Occurred             
+    Coverpoint rst_cp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin ASSERTED                                     4822          1          -    Covered              
+        bin DEASSERTED                                  95178          1          -    Covered              
+    Cross cross_wr_rd_addr_cp                         100.00%        100          -    Covered              
+        covered/total bins:                                48         48          -                      
+        missing/total bins:                                 0         48          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <RD_to_RD,ADDR_MID[6]>                   1057          1          -    Covered              
+            bin <RD_to_RD,ADDR_MID[5]>                   1053          1          -    Covered              
+            bin <RD_to_RD,ADDR_MID[4]>                    988          1          -    Covered              
+            bin <RD_to_RD,ADDR_MID[3]>                    994          1          -    Covered              
+            bin <RD_to_RD,ADDR_MID[2]>                   1054          1          -    Covered              
+            bin <RD_to_RD,ADDR_MID[1]>                    924          1          -    Covered              
+            bin <WR_to_WR,ADDR_MID[6]>                   2224          1          -    Covered              
+            bin <WR_to_WR,ADDR_MID[5]>                   2291          1          -    Covered              
+            bin <WR_to_WR,ADDR_MID[4]>                   2306          1          -    Covered              
+            bin <WR_to_WR,ADDR_MID[3]>                   2226          1          -    Covered              
+            bin <WR_to_WR,ADDR_MID[2]>                   2275          1          -    Covered              
+            bin <WR_to_WR,ADDR_MID[1]>                   2266          1          -    Covered              
+            bin <RD_to_WR,ADDR_MID[6]>                   1581          1          -    Covered              
+            bin <RD_to_WR,ADDR_MID[5]>                   1509          1          -    Covered              
+            bin <RD_to_WR,ADDR_MID[4]>                   1554          1          -    Covered              
+            bin <RD_to_WR,ADDR_MID[3]>                   1573          1          -    Covered              
+            bin <RD_to_WR,ADDR_MID[2]>                   1510          1          -    Covered              
+            bin <RD_to_WR,ADDR_MID[1]>                   1522          1          -    Covered              
+            bin <WR_to_RD,ADDR_MID[6]>                   1514          1          -    Covered              
+            bin <WR_to_RD,ADDR_MID[5]>                   1499          1          -    Covered              
+            bin <WR_to_RD,ADDR_MID[4]>                   1501          1          -    Covered              
+            bin <WR_to_RD,ADDR_MID[3]>                   1454          1          -    Covered              
+            bin <WR_to_RD,ADDR_MID[2]>                   1502          1          -    Covered              
+            bin <WR_to_RD,ADDR_MID[1]>                   1462          1          -    Covered              
+            bin <RD,ADDR_MID[6]>                         2571          1          -    Covered              
+            bin <RD,ADDR_MID[5]>                         2552          1          -    Covered              
+            bin <RD,ADDR_MID[4]>                         2489          1          -    Covered              
+            bin <RD,ADDR_MID[3]>                         2448          1          -    Covered              
+            bin <RD,ADDR_MID[2]>                         2556          1          -    Covered              
+            bin <RD,ADDR_MID[1]>                         2386          1          -    Covered              
+            bin <WR,ADDR_MID[6]>                         3805          1          -    Covered              
+            bin <WR,ADDR_MID[5]>                         3800          1          -    Covered              
+            bin <WR,ADDR_MID[4]>                         3860          1          -    Covered              
+            bin <WR,ADDR_MID[3]>                         3799          1          -    Covered              
+            bin <WR,ADDR_MID[2]>                         3785          1          -    Covered              
+            bin <WR,ADDR_MID[1]>                         3788          1          -    Covered              
+            bin <RD_to_RD,ADDR_MAX>                      4960          1          -    Covered              
+            bin <WR_to_WR,ADDR_MAX>                     11138          1          -    Covered              
+            bin <RD_to_WR,ADDR_MAX>                      7370          1          -    Covered              
+            bin <WR_to_RD,ADDR_MAX>                      7577          1          -    Covered              
+            bin <RD,ADDR_MAX>                           12537          1          -    Covered              
+            bin <WR,ADDR_MAX>                           18508          1          -    Covered              
+            bin <RD_to_RD,ADDR_0>                        4954          1          -    Covered              
+            bin <WR_to_WR,ADDR_0>                       11193          1          -    Covered              
+            bin <RD_to_WR,ADDR_0>                        7429          1          -    Covered              
+            bin <WR_to_RD,ADDR_0>                        7539          1          -    Covered              
+            bin <RD,ADDR_0>                             12494          1          -    Covered              
+            bin <WR,ADDR_0>                             18622          1          -    Covered              
+    Cross cross_wr_rd_rst_cp                          100.00%        100          -    Covered              
+        covered/total bins:                                12         12          -                      
+        missing/total bins:                                 0         12          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <RD_to_RD,DEASSERTED>                   15212          1          -    Covered              
+            bin <WR_to_WR,DEASSERTED>                   34160          1          -    Covered              
+            bin <RD_to_WR,DEASSERTED>                   22885          1          -    Covered              
+            bin <WR_to_RD,DEASSERTED>                   22921          1          -    Covered              
+            bin <RD,DEASSERTED>                         38133          1          -    Covered              
+            bin <WR,DEASSERTED>                         57045          1          -    Covered              
+            bin <RD_to_RD,ASSERTED>                       772          1          -    Covered              
+            bin <WR_to_WR,ASSERTED>                      1759          1          -    Covered              
+            bin <RD_to_WR,ASSERTED>                      1163          1          -    Covered              
+            bin <WR_to_RD,ASSERTED>                      1127          1          -    Covered              
+            bin <RD,ASSERTED>                            1900          1          -    Covered              
+            bin <WR,ASSERTED>                            2922          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+Total Coverage By Instance (filtered view): 100.00%
+

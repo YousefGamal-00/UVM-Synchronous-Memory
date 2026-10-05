@@ -1,0 +1,136 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /\top#DUT 
+=== Design Unit: work.MEM
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         6         6         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /\top#DUT 
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File Mem.sv
+------------------------------------IF Branch------------------------------------
+    43                                    104090     Count coming in to IF
+    43              1                       9383                 if (!rst)
+    48              1                      37661                 else if (!wr_rd_n)
+    53              1                      57046                 else
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    65                                    104586     Count coming in to IF
+    65              1                       9407                 if (!rst)
+    69              1                      57045                 else if (wr_rd_n)
+                                           38134     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       9         9         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /\top#DUT  --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File Mem.sv
+    12                                               module MEM #(parameter DEPTH = 16, WIDTH = 32)
+    13                                               (
+    14                                                   input  wire logic                        clk       , // Clock signal
+    15                                                   input  wire logic                        rst       , // Active-low asynchronous reset
+    16                                                   input  wire logic                        wr_rd_n   , // 1: Write, 0: Read
+    17                                                   input  wire logic    [WIDTH-1:0]         Data_in   , // Input data
+    18                                                   input  wire logic    [$clog2(DEPTH)-1:0] Address   , // Memory address
+    19                                               
+    20                                                   output wire logic    [WIDTH-1:0]         data_out  , // Output data
+    21                                                   output wire logic                        Valid_out   // Output valid
+    22                                               );
+    23                                               
+    24                                                   //-----------------------------------------------------------------------------
+    25                                                   // Internal Signals
+    26                                                   //-----------------------------------------------------------------------------
+    27                                                   reg    [WIDTH-1:0]           mem [DEPTH-1:0]; // Memory array
+    28                                                   reg    [WIDTH-1:0]           data_out_reg   ; // Registered output data 
+    29                                                   reg                          Valid_out_reg  ; // Registered output valid signal
+    30                                               
+    31                                                   //-----------------------------------------------------------------------------
+    32                                                   // Output Assignments
+    33                                                   //-----------------------------------------------------------------------------
+    34                                                   assign data_out  = data_out_reg;
+    35                                                   assign Valid_out = Valid_out_reg;
+    36                                               
+    37                                                   //-----------------------------------------------------------------------------
+    38                                                   // Read Operation Logic
+    39                                                   // When wr_rd_n = 0, read data from memory.
+    40                                                   //-----------------------------------------------------------------------------
+    41              1                     104090         always @(posedge clk or negedge rst)
+    42                                                       begin
+    43                                                           if (!rst)
+    44                                                               begin
+    45              1                       9383                         data_out_reg  <= '0;
+    46              1                       9383                         Valid_out_reg <= 1'b0;
+    47                                                               end
+    48                                                           else if (!wr_rd_n)
+    49                                                               begin
+    50              1                      37661                         data_out_reg  <= mem[Address];
+    51              1                      37661                         Valid_out_reg <= 1'b1;
+    52                                                               end
+    53                                                           else
+    54                                                               begin
+    55              1                      57046                         Valid_out_reg <= 1'b0;
+    56                                                               end
+    57                                                       end
+    58                                               
+    59                                                   //-----------------------------------------------------------------------------
+    60                                                   // Write Operation Logic
+    61                                                   // When wr_rd_n = 1, write data into memory.
+    62                                                   //-----------------------------------------------------------------------------
+    63              1                     104586         always @(posedge clk or negedge rst)
+    64                                                       begin
+    65                                                           if (!rst)
+    66                                                               begin
+    67              1                       9407                         mem <= '{default:'0};
+    68                                                               end
+    69                                                           else if (wr_rd_n)
+    70                                                               begin
+    71              1                      57045                         mem[Address] <= Data_in;
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        112       112         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /\top#DUT  --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                      Address[0-2]           1           1      100.00 
+                                     Data_in[0-15]           1           1      100.00 
+                                         Valid_out           1           1      100.00 
+                                     Valid_out_reg           1           1      100.00 
+                                               clk           1           1      100.00 
+                                    data_out[0-15]           1           1      100.00 
+                                data_out_reg[15-0]           1           1      100.00 
+                                               rst           1           1      100.00 
+                                           wr_rd_n           1           1      100.00 
+
+Total Node Count     =         56 
+Toggled Node Count   =         56 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (112 of 112 bins)
+
+
+Total Coverage By Instance (filtered view): 100.00%
+
